@@ -1,0 +1,1 @@
+- Sequence: Frame --> Ethernet --> IP --> TCP/UDP --> Application
