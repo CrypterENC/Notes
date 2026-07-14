@@ -11,10 +11,14 @@
             "id": "10665b51db822d60",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "MCA/Sem2/Network Security/Week01/Week 01 notes.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Week 01 notes"
             }
           }
         ]
@@ -162,5 +166,52 @@
     }
   },
   "active": "10665b51db822d60",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "README.md",
+    "MCA/Sem2/Data Structure and Algorithms/week01/Week_01_Reading Materials.pdf",
+    "MCA/Sem2/Data Structure and Algorithms/week01/Week 01 Notes.md",
+    "MCA/Sem2/ML and AI in cybersecuirty/Week1/Week 1 pdf of the slides-1.pdf",
+    "MCA/Sem2/Network Security/Week01/Week 01 notes.md",
+    "MCA/Sem2/Network Security/Week01/Week1 slides.pdf",
+    "MCA/Sem2/Network Security/Docs/Syllabus & Evaluation plan (3) (1).pdf",
+    "MCA/Sem2/Network Security/Docs/Key_Cybersecurity_Terms-EN.pdf",
+    "MCA/Sem2/Network Security/Docs/Computer Networking-1 (3).pdf",
+    "MCA/Sem1/FCS/Week2/2.pdf",
+    "MCA/Sem1/FCS/Week3/3.pdf",
+    "MCA/Sem1/FCS/attachments/Pasted image 20260320114957.png",
+    "MCA/Sem1/FCS/attachments/Pasted image 20260321165447.png",
+    "MCA/Sem1/FCS/Week12/12.2.pdf",
+    "MCA/Sem1/FCS/Week12/12.1.pdf",
+    "MCA/Sem1/FCS/Week12/Week12-Notes.md",
+    "MCA/Sem1/FCS/Week13/Week13-Notes.md",
+    "MCA/Sem1/FCS/Week11/SQL-CHEAT-SHEET.md",
+    "MCA/Sem1/Object Oriented using Java/Programs/Untitled.md",
+    "MCA/Sem1/Object Oriented using Java/Week 13/notes.md",
+    "MCA/Sem1/Object Oriented using Java/Week 8/expection.md",
+    "MCA/Sem1/Object Oriented using Java/Week 1/1.2 Class and Object.md",
+    "MCA/Sem1/Object Oriented using Java/Week 1/1.5 Polymorphism.md",
+    "MCA/Sem1/Object Oriented using Java/Week 1/1.4 Inheritence.md",
+    "MCA/Sem1/Object Oriented using Java/Week 1/1.3 Encapsulation and Abstraction.md",
+    "MCA/Sem1/Object Oriented using Java/Week 1/1.1 Introduction to Object Oriented Programing.md",
+    "MCA/Sem1/Object Oriented using Java/Week 7/Untitled.md",
+    "MCA/Sem1/FSO/Week2/4.3 Linux Servers and Clients.md",
+    "MCA/Sem1/FSO/Week2/4.5 The Linux File System.md",
+    "MCA/Sem1/FSO/Week2/3.2 Windows Architecture and Operations.md",
+    "MCA/Sem1/FSO/Week2/3.3 Windows Configuration and Monitoring.md",
+    "MCA/Sem1/FSO/Week2/4.2 Linux Shell.md",
+    "MCA/Sem1/FSO/Week2/as.md",
+    "MCA/Sem1/FSO/Week2/4.1 Linux.md",
+    "MCA/Sem1/FSO/Week4/Roles and Responsibilities in SOC.md",
+    "MCA/Sem1/FSO/Week3/5.3 IPv4.md",
+    "MCA/Sem1/FSO/Week3/5.1 Network Communication Process.md",
+    "MCA/Sem1/FSO/Week3/5.2 Communication Protocol.md",
+    "MCA/Sem1/FSO/attachments/Pasted image 20260306230256.png",
+    "MCA/Sem1/FSO/attachments/Pasted image 20260307213751.png",
+    "MCA/Sem1/FSO/attachments/Pasted image 20260306185249.png",
+    "MCA/Sem1/FSO/attachments/Pasted image 20260306230613.png",
+    "MCA/Sem1/FSO/attachments/Pasted image 20260306225551.png",
+    "MCA/Sem1/FSO/attachments/Pasted image 20260306192143.png",
+    "MCA/Sem1/2.1 Type Casting.png",
+    "MCA/Sem1/2.1 Type Casting-1.png"
+  ]
 }
