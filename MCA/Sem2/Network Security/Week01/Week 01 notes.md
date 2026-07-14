@@ -86,3 +86,9 @@
     - **Tier 2:** Regional providers (connect Tier 1 to local ISPs)
         
     - **Tier 3:** Local ISPs (provide direct access to homes/businesses)
+
+### 6. Protocols
+
+- **What they are:** Rules and standards that govern how data is sent and received
+    
+- **Why they matter:** Without protocols, devices couldn't understand each other
