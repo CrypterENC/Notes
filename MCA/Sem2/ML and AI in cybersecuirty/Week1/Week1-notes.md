@@ -260,3 +260,83 @@ plt.title('Multiple Lines')
 plt.legend()
 plt.grid(True, alpha=0.3)
 ```
+
+![[Anatomy of Matplotlib figure.png]]
+
+## 1.10 Pandas🎦📜👩🏽‍💻
+
+## What is Pandas?
+
+| **Aspect**                           | **Details**                                                                                               |
+| ------------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| **What it is**                       | The **#1 data manipulation library** in Python                                                            |
+| **Core data structures**             | **Series** (1D) and **DataFrame** (2D — like a spreadsheet)                                               |
+| **Why it matters for ML/AI**         | Data cleaning, preprocessing, feature engineering, exploratory data analysis (EDA)                        |
+| **Why it matters for Cybersecurity** | Parsing logs, analyzing network traffic, processing threat intelligence feeds, handling security datasets |
+| **Analogy**                          | Pandas = **Excel on steroids** with code                                                                  |
+
+### Importing the Lib
+```python
+import pandas as pd  # Standard alias
+import numpy as np   # Pandas builds on NumPy
+```
+
+### Core Data Structures
+#### Series (1D)
+```python
+import pandas as pd
+
+# Create a Series from a list
+s = pd.Series([10, 20, 30, 40, 50])
+print(s)
+
+	# Output:
+	# 0    10
+	# 1    20
+	# 2    30
+	# 3    40
+	# 4    50
+	# dtype: int64
+
+# Series with custom index
+s = pd.Series([10, 20, 30], index=['a', 'b', 'c'])
+print(s)
+	# a    10
+	# b    20
+	# c    30
+	# dtype: int64
+```
+
+#### DataFrame (2D — Most Important!)
+```python
+# Create a DataFrame from dictionary
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie', 'Diana'],
+    'Age': [25, 30, 35, 28],
+    'City': ['New York', 'London', 'Paris', 'Tokyo']
+}
+df = pd.DataFrame(data)
+print(df)
+
+# Output:
+	#       Name  Age      City
+	# 0    Alice   25  New York
+	# 1      Bob   30    London
+	# 2  Charlie   35     Paris
+	# 3    Diana   28     Tokyo
+```
+
+### Reading Data
+```python
+# Read CSV file (most common)
+df = pd.read_csv('network_logs.csv')
+
+# Read Excel file
+df = pd.read_excel('threat_intelligence.xlsx')
+
+# Read JSON (API responses)
+df = pd.read_json('alerts.json')
+
+# Read from URL (threat feeds)
+df = pd.read_csv('https://raw.githubusercontent.com/.../malware_data.csv')
+```
