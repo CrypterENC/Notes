@@ -260,3 +260,5 @@ plt.title('Multiple Lines')
 plt.legend()
 plt.grid(True, alpha=0.3)
 ```
+
+![[Anatomy of Matplotlib figure.png]]
