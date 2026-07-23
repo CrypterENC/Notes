@@ -60,21 +60,19 @@ In the next set of videos we will slowly work our way through the following note
 
 I will use this notebook as a base and demonstrate the basics of the libraries we will be using in this course. You should follow along on your computer.
 
-## 1.7 Scikit-Learn and Jupyter🎦📜👩🏽‍💻
-
-### NumPy🎦📜👩🏽‍💻
+## NumPy🎦📜👩🏽‍💻
 - Numerical Python
 - The fundamental package for scientific computing
 - it gives as **ndarray** (n-dimensional array)
 
-#### Importing NumPy
+### Importing NumPy
 ```python
 import numpy as np  # Standard convention
 ```
 
-#### Core Concepts You MUST Know
+### Core Concepts You MUST Know
 
-##### 1. Creating Arrays
+#### 1. Creating Arrays
 ```python
 # From a python list
 arr = np.array([1,2,3,4,5])
@@ -128,8 +126,7 @@ randint = np.random.randint(0, 100, (3, 3))  # Integers
 	       [23, 76, 22]], dtype=int32)
 ```
 
-##### 2. Array Attributes
-
+#### 2. Array Attributes
 ```python
 arr = np.array([[1, 2, 3], [4, 5, 6]])
 ```
@@ -141,8 +138,7 @@ arr = np.array([[1, 2, 3], [4, 5, 6]])
 | **arr.ndim**     | 2 — number of dimensions |
 | **arr.dtype**    | int64 — data type        |
 | **arr.itemsize** | 8 — bytes per element    |
-##### 3. Indexing and Slicing
-
+#### 3. Indexing and Slicing
 ```python
 arr = np.array([[1, 2, 3, 4],
                 [5, 6, 7, 8],
@@ -171,68 +167,96 @@ mask = arr > 5
 arr[mask]          # [6, 7, 8, 9, 10, 11, 12]
 ```
 
-
-
-
-
-
+#### 4. Vectorized Operations (WHY NumPy is FAST)
 ```python
-# Shape, Ndmin
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
 
-np.random.seed(0)  # seed for reproducibility
+# Element-wise operations (NO LOOPS!)
+arr1 + arr2        # [5, 7, 9]
+arr1 * arr2        # [4, 10, 18]
+arr1 ** 2          # [1, 4, 9]
+np.sqrt(arr1)      # [1, 1.41, 1.73]
 
-x1 = np.random.randint(10, size=6)  # One-dimensional array
-x2 = np.random.randint(10, size=(3, 4))  # Two-dimensional array
-x3 = np.random.randint(10, size=(3, 4, 5))  # Three-dimensional array
+# Broadcasting — apply operation to entire array
+arr = np.array([1, 2, 3, 4])
+arr + 10           # [11, 12, 13, 14]
+arr * 2            # [2, 4, 6, 8]
 ```
 
+#### 5. Reshaping and Transposing
 ```python
-print(x1)
+arr = np.array([1, 2, 3, 4, 5, 6])
+
+# Reshape
+arr.reshape(2, 3)    # [[1, 2, 3], [4, 5, 6]]
+arr.reshape(3, 2)    # [[1, 2], [3, 4], [5, 6]]
+
+# Transpose
+arr2 = np.array([[1, 2, 3], [4, 5, 6]])
+arr2.T               # [[1, 4], [2, 5], [3, 6]]
+
+# Flatten
+arr2.flatten()       # [1, 2, 3, 4, 5, 6]
 ```
 
+## 1.9 Matplotlib🎦📜👩🏽‍💻
+### Import Matplotlib
 ```python
-array([5, 0, 3, 3, 7, 9], dtype=int32)
+import matplotlib.pyplot as plt  # Standard alias
 ```
 
+### Core Concepts You MUST Know
+#### 1. Basic Line Plot
 ```python
-print(x2)
+import matplotlib.pyplot as plt
+import numpy as np
+
+#Data
+x = np.array([1,2,3,4,5])
+y = np.array([2,4,6,8,10])
+
+#Create plot
+plt.plot(x,y);
+plt.title('First Line Plot using Matplotlib')
+plt.xlabel('X-zxis')
+plt.ylabel('Y-zxis')
 ```
 
+#### 2. Figure and Axes (The OOP Way)
 ```python
-array([[3, 5, 2, 4],
-       [7, 6, 8, 8],
-       [1, 6, 7, 7]], dtype=int32)
+# Create figure and axes explicitly (RECOMMENDED for complex plots)
+import matplotlib.pyplot as plt
+import numpy as np
+
+#Data
+x = np.array([1,2,3,4,5])
+y = np.array([2,4,6,8,10])
+
+fig, ax = plt.subplots()
+
+ax.plot(x,y);
+ax.set_xlabel('X-axis');
+ax.set_ylabel('Y-axis');
+ax.set_title('Line Plot');
 ```
 
-```python
-print(x3)
-```
+#### 3. Multiple Plots on Same Figure
 
 ```python
-array([[[8, 1, 5, 9, 8],
-        [9, 4, 3, 0, 3],
-        [5, 0, 2, 3, 8],
-        [1, 3, 3, 3, 7]],
+x = np.linspace(0,10,100)
+y1 = np.sin(x)    # Sine of each element in x
+y2 = np.cos(x)    # Cosine of each element in x
+y3 = x**2         # Square of each element in x (element-wise)
 
-       [[0, 1, 9, 9, 0],
-        [4, 7, 3, 2, 7],
-        [2, 0, 0, 4, 5],
-        [5, 6, 8, 4, 1]],
+# Single Figure with multiple lines
+plt.plot(x, y1, label='sin(x)', color='blue', linestyle='-')
+plt.plot(x, y2, label='cos(x)', color='red', linestyle='--')
+plt.plot(x, y3, label='x2', color='green', linestyle=':')
 
-       [[4, 9, 8, 1, 1],
-        [7, 9, 9, 3, 6],
-        [7, 2, 0, 3, 5],
-        [9, 4, 4, 6, 4]]], dtype=int32)
-```
-
-```python
-print("x3 ndim: ", x3.ndim)  # ndim is n - dimensional
-print("x3 shape:", x3.shape) 
-print("x3 size: ", x3.size)
-```
-
-```python
-x3 ndim:  3
-x3 shape: (3, 4, 5)
-x3 size:  60
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.title('Multiple Lines')
+plt.legend()
+plt.grid(True, alpha=0.3)
 ```
