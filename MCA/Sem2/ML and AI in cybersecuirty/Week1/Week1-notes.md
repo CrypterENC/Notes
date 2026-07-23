@@ -240,3 +240,23 @@ ax.set_xlabel('X-axis');
 ax.set_ylabel('Y-axis');
 ax.set_title('Line Plot');
 ```
+
+#### 3. Multiple Plots on Same Figure
+
+```python
+x = np.linspace(0,10,100)
+y1 = np.sin(x)    # Sine of each element in x
+y2 = np.cos(x)    # Cosine of each element in x
+y3 = x**2         # Square of each element in x (element-wise)
+
+# Single Figure with multiple lines
+plt.plot(x, y1, label='sin(x)', color='blue', linestyle='-')
+plt.plot(x, y2, label='cos(x)', color='red', linestyle='--')
+plt.plot(x, y3, label='x2', color='green', linestyle=':')
+
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.title('Multiple Lines')
+plt.legend()
+plt.grid(True, alpha=0.3)
+```
