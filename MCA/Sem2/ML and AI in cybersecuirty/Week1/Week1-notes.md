@@ -307,7 +307,7 @@ print(s)
 	# dtype: int64
 ```
 
-#### DataFrame (2D — Most Important!)
+#### 📍DataFrame (2D — Most Important!)
 ```python
 # Create a DataFrame from dictionary
 data = {
@@ -339,4 +339,100 @@ df = pd.read_json('alerts.json')
 
 # Read from URL (threat feeds)
 df = pd.read_csv('https://raw.githubusercontent.com/.../malware_data.csv')
+```
+
+### DataFrame Data Inspection
+```python
+# Quick overview
+df.head()           # First 5 rows
+df.tail()           # Last 5 rows
+df.sample(10)       # Random 10 rows
+
+# Information about dataset
+df.info()           # Column names, data types, non-null counts
+df.shape            # (rows, columns)
+df.columns          # List of column names
+df.dtypes           # Data types of each column
+
+# Statistical summary
+df.describe()       # Count, mean, std, min, 25%, 50%, 75%, max (only numeric)
+df.describe(include='object')  # For categorical columns
+```
+
+## Sklearn
+## What is Scikit-Learn?
+
+|Aspect|Details|
+|---|---|
+|**What it is**|The **#1 machine learning library** in Python|
+|**Built on**|NumPy, SciPy, Matplotlib|
+|**Why it matters for ML/AI**|Provides **consistent API** for all ML algorithms — classification, regression, clustering, dimensionality reduction, preprocessing, model selection|
+|**Why it matters for Cybersecurity**|Build intrusion detection systems, malware classifiers, anomaly detectors, threat prediction models|
+|**Key philosophy**|**Simple, efficient, and consistent** API across all models|
+
+### Import
+```python
+# Main modules
+import sklearn
+from sklearn import datasets
+from sklearn import preprocessing
+from sklearn import model_selection
+from sklearn import metrics
+from sklearn import ensemble
+from sklearn import linear_model
+from sklearn import neighbors
+from sklearn import svm
+from sklearn import tree
+from sklearn import neural_network
+from sklearn import cluster
+from sklearn import decomposition
+```
+
+### SECTION 1: SKLEARN DATASETS
+
+#### Built-in Datasets (For Learning & Testing)
+
+|Dataset|Type|Description|Cybersecurity Use|
+|---|---|---|---|
+|`load_iris()`|Classification|3 species of iris flowers|Practice classification basics|
+|`load_wine()`|Classification|Wine chemical composition|Practice classification|
+|`load_breast_cancer()`|Classification|Cancer diagnosis|Binary classification practice|
+|`load_digits()`|Classification|8x8 handwritten digits|Image classification practice|
+|`fetch_california_housing()`|Regression|Housing prices|Regression practice|
+|`load_diabetes()`|Regression|Diabetes progression|Regression practice|
+|`make_classification()`|Synthetic|Custom classification|Generate custom IDS datasets|
+|`make_regression()`|Synthetic|Custom regression|Generate custom data|
+|`make_blobs()`|Synthetic|Gaussian clusters|Clustering practice|
+|`make_moons()`|Synthetic|Moon-shaped clusters|Non-linear classification|
+|`make_circles()`|Synthetic|Circular clusters|Non-linear classification|
+|`fetch_20newsgroups()`|Text|News articles|NLP practice|
+### let's load up some data with Scikit-Learn and Pandas
+We will use some built-in datasets from Scikit-learn, later on we will learn to load our own data
+
+**Note:** In the video, I use the Boston housing dataset, that dataset is no longer distrubuted with scikit-learn, so I switched to the California housing dataset. Overall the California housing dataset is better and more interesting, so it's a good change.
+
+```python
+california = datasaets.fetch_california_housing(as_frame=True)
+california.feature_names
+
+#OUTPUT
+	['MedInc',
+	 'HouseAge',
+	 'AveRooms',
+	 'AveBedrms',
+	 'Population',
+	 'AveOccup',
+	 'Latitude',
+	 'Longitude']
+```
+
+### Push our data into a pandas DataFrame for ease of use
+> DataFrame is a Table like in excel, but GOATED.
+
+```python
+# Old way to push Data into DF
+hosuing = pd.DataFrame(california.data, columns = california.feature_names)
+
+# New way of pushing Data into DF using 'frame' --> as_frame=True.
+housing = california.frame
 ```
