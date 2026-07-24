@@ -13,7 +13,7 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "ASCII-Art-Guide-Careers-with-Aniket.pdf"
+                "file": "MCA/Sem2/ASCII-Art-Guide-Careers-with-Aniket.pdf"
               },
               "icon": "lucide-file-text",
               "title": "ASCII-Art-Guide-Careers-with-Aniket"
@@ -164,11 +164,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "10665b51db822d60",
+  "active": "dff0161eedba0847",
   "lastOpenFiles": [
     "MCA/Sem2/ML and AI in cybersecuirty/Week1/Week1-notes.md",
     "MCA/Sem2/ML and AI in cybersecuirty/Week1/pandas-cheat-notes.md",
-    "ASCII-Art-Guide-Careers-with-Aniket.pdf",
+    "MCA/Sem2/ASCII-Art-Guide-Careers-with-Aniket.pdf",
     "MCA/Sem2/Attachments/Anatomy of Matplotlib figure.png",
     "MCA/Sem2/Attachments",
     "MCA/Sem2/ML and AI in cybersecuirty/Week1/week1-pdf.pdf",
